@@ -5,3 +5,6 @@ Was brauchen wir für den Server?
   - PHP
   - FTP
   - (sql)
+
+Google Auth:
+http://ph-blog.de/ssh-zugang-absichern-mittel-google-authenticator/
