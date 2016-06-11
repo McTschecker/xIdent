@@ -102,7 +102,8 @@ int timed;
     printf("\n Updating...");
     [indicator startAnimating];
     
-    [self getKEY]; //Key abrufen
+    NSString *stringfor = [self stringgetKeyfromServer]; //Key abrufen
+    [_targetd setText:stringfor];
     
 }
 -(void)getKEY
@@ -111,7 +112,7 @@ int timed;
     
     url_bu = @"";
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://gf2.noscio.eu"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://gf2.noscio.eu"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { // Bitte die gf2.noscio.eu Domain mit dem richtigen Pfad zum Keygenerator ersetzen.
         NSString *stringresult;
         stringresult = [stringresult initWithData:data encoding:NSUTF8StringEncoding];
         [_targetd setText:stringresult];
