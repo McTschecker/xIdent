@@ -1,10 +1,12 @@
 Was brauchen wir für den Server?
 
-- Debian Linux
+- Debian Linux    - Erledigt! Gute Arbeit!
   - Apache
   - PHP
   - FTP
   - (sql)
 
-Auth server
+Auth server - Erledigt! Gute Arbeit!
   - sql
+
+Es fehlt noch etwas Backend.
