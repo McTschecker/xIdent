@@ -1,3 +1,6 @@
+Vorschlag:
+Cookies serverseitig speichermn, wenn möglich.
+
 404:
 http://static.olark.com/css/4/a/4a28e823033682623b139c429654b99d.css?http
 Methode: GET
