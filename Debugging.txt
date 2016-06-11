@@ -1,0 +1,24 @@
+404:
+http://static.olark.com/css/4/a/4a28e823033682623b139c429654b99d.css?http
+Methode: GET
+
+http://xident.tk/assets/fontawesome-webfont-9ccb12717ca0d8aafce690bc0a607ad0.ttf
+Methode: GET
+
+Kommt durch:
+http://log.olark.com/jslog/log.png?version=-bucket1&location=http://xident.tk/test.php?u=http://lima-city.de&message=#perf_application.loader0,bucket1,Firefox,desktop=1045 #perf_assets.loader0,bucket1,Firefox,desktop=296 #perf_box.loader0,bucket1,Firefox,desktop=1548 #perf_connection.loader0,bucket1,Firefox,desktop=1550 #perf_extready.loader0,bucket1,Firefox,desktop=1427 #perf_getapplication.loader0,bucket1,Firefox,desktop=519 #perf_getconnection.loader0,bucket1,Firefox,desktop=1516 #perf_idready.loader0,bucket1,Firefox,desktop=305 #perf_load.loader0,bucket1,Firefox,desktop=517 #perf_loader.loader0,bucket1,Firefox,desktop=195 #perf_storedownloaded.loader0,bucket1,Firefox,desktop=1398 #perf_storereceived.loader0,bucket1,Firefox,desktop=1424 #perf_storeparsed.loader0,bucket1,Firefox,desktop=1424 &tabname=oktab2128927484356874&conversation_id=Yqd9EK8gbuixbxB76t7VWThMNlE0B2Ao&visitor_id=QTDd2uf0unOpiTNj6t7VWThMNBE2120l&site_id=4104-323-10-7556&bucket=bucket1&level=track&timestamp=1465655500660&properties={}&recent_logs=[]
+Methode GET
+
+http://nrpc.olark.com/nrpc/p?j=olark-11465655515026&&c=pollevents&q=1410.15026.1&i=Yqd9EK8gbuixbxB76t7VWThMNlE0B2Ao&cb=hbl.client.callbacks.pollevents&next_poll_time=15000&v=QTDd2uf0unOpiTNj6t7VWThMNBE2120l&s=4104-323-10-7556&version=api-1.2.1&pretty=true&_rnd=0.2404593684474876
+Methode: GET
+
+https://static.olark.com/jsclient-bucket1/storage.html?v=1465313089208#TK22854342457264454
+Methode: GET
+
+Bei Lima City:
+Warning: curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument in /var/www/html/test.php on line 75
+
+Warning: curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument in /var/www/html/test.php on line 75
+
+Warning: curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument in /var/www/html/test.php on line 75
+
