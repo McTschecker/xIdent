@@ -1,6 +1,9 @@
 <?php
+
 error_reporting(E_ALL & ~E_NOTICE);
 ini_set('display_errors', 1);
+
+$server_adress = "10.0.15.133";
 
 //FROM STACKOVERFLOW
 if (!function_exists('getallheaders')) 
@@ -21,7 +24,7 @@ if (!function_exists('getallheaders'))
 //ENDE
 
 
-$xIdent_url = "http://10.0.15.133/test.php?u=";
+$xIdent_url = "http://".$server_adress."/test.php?u=";
 
 /* Set it true for debugging. */
 $logHeaders = FALSE;
@@ -30,13 +33,26 @@ $binary = false;
 /* Site to forward requests to.  */
 $site = 'https://lima-city.de/';
 $site = $_GET['u'];
+#echo $site;
 
 // Delete / at beginning
-$site = preg_replace("/^\/{*}./",'',$site);
+$site = preg_replace("/^\/+/",'',$site);
 
 if(!startsWith($site,"http")) {
 	$site = "http://".$site;
 }
+
+//$path = parse_url($site, PHP_URL_PATH);
+//echo $path;
+
+/*if(file_exists($path)) {
+	header("HTTP/1.1 303 See Other");
+	header("Location: ".$server_adress."/".$path);
+	exit();
+}
+else {
+	#echo $path;
+}*/
 
 /* Domains to use when rewriting some headers. */
 #$remoteDomain = 'remotesite.domain.tld';
@@ -104,6 +120,9 @@ if($binary) {
 
 $response = curl_exec($ch);
 
+$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+$header = substr($response, 0, $header_size);
+
 //HTML-Sonderzeichen
 $response = html_entity_decode($response);
 
@@ -120,8 +139,12 @@ else {
 
 //TODO: Variable benennen
 $l = "no_url";
-if(preg_match('#Location: (.*)#', $response, $r)){
+if(preg_match("/Location: (.*)/", $header, $r)==1){
     $l = trim($r[1]);
+    $site = $l;
+    $site = $xIdent_url.$site;
+    goto newtry;
+    
 }
 if(strcmp($l,"no_url")!=0) {
     $site = $l;
@@ -137,6 +160,7 @@ $response = modifyHTML($response,$last_domain,$xIdent_url);
 
 $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 $header = substr($response, 0, $header_size);
+print_r($header);
 $body = substr($response, $header_size);
 
 curl_close($ch);
