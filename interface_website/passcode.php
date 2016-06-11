@@ -10,19 +10,26 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/kickstart.js"></script>                                  <!-- KICKSTART -->
 </head><body>
+    
 <div class="grid">
 	<div class="col_12" style="margin-top:100px;">
 		<h1 class="center">
-		<label for="text1">PASSCODE</label>
-<input id="text1" type="text" />
+        <button class="small square">Code anfordern</button> <br>
+            <hr class="alt1" /> <br>
+
+		<label for="text1">PASSCODE</label> <br>
+                <input id="text1" type="text" /><br>
+            <hr class="alt1" />
+
+            <button class="medium  square">senden</button><h1 class="center"> 
 	</div>
 
 
 
-<!-- ===================================== START FOOTER =====================================
+<!-- ===================================== START FOOTER ===================================== -->
 <div class="clear"></div>
 <div id="footer">
-&copy; Copyright 2011–2012 All Rights Reserved. This website was built with <a href="http://www.99lime.com">HTML KickStart</a>
-</div> -->
+Website by xIdent -- Jhackt
+</div> 
 
 </body></html>
