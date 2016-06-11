@@ -1,0 +1,7 @@
+<?php
+
+$randNumber = rand(100000, 1000000)
+
+echo $randNumber;
+
+?>
