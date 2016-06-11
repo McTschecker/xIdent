@@ -21,21 +21,25 @@ UIButton *update;
 {
     [super viewDidLoad];
     int factor;
-    factor = 300;
+    factor = 250;
+
     _targetd = [[UILabel alloc]initWithFrame:CGRectMake(self.view.center.x-factor/2,self.view.center.y,factor,factor/2)];
     [self.view addSubview:_targetd];
     _targetd.backgroundColor = [UIColor whiteColor];
     _targetd.textColor = [UIColor blackColor];
     _targetd.layer.borderWidth = 1.0f;
     _targetd.layer.borderColor = [UIColor blackColor];
- 
+    _targetd.masktoBound = YES; // Erstellung der Linienränder
+    
+
     _targetd.numberOfLines = 5;
                                                    
     update = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x-factor/2,self.view.frame.size.height/8,factor,factor)];
     [update setBackgroundColor:[UIColor blackColor]];
     [update setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
    
-    _targetd.textColor = [UIColor blueColor];
+    _targetd.textColor = [UIColor blackColor];
+
                                                        
 [self.view addSubview:update];
    
@@ -63,5 +67,5 @@ update.titleLabel.textAlignment = NSTextAlignmentCenter;
         key = [NSString stringWithContentsOfURL:[NSURL URLWithString:(@"https://gf2.noscio.eu")] encoding:NSUTF8StringEncoding error:nil];
                return key;
        
-               }
+    }
 @end
