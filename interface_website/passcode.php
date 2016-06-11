@@ -29,7 +29,7 @@
 <!-- ===================================== START FOOTER ===================================== -->
 <div class="clear"></div>
 <div id="footer">
-Website by xIdent -- Jhackt
+Website 2016
 </div> 
 
 </body></html>
