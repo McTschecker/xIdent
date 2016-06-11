@@ -1,0 +1,59 @@
+#include <iostream>
+#include <ctime>
+#include<Windows.h>
+#include<string>
+
+using namespace std;
+
+static const char alphanum[] =
+"0123456789"
+"!@#$%^&*"
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+"abcdefghijklmnopqrstuvwxyz"; 
+
+int stringLength = sizeof(alphanum) - 1;
+
+char genRandom() {
+
+	return alphanum[rand() % stringLength];
+}
+
+int main() {
+
+	srand(time(0));
+	std::string Str;
+
+	int length = 0;
+
+
+	for (unsigned int i = 0; i < 9; ++i) {
+		Str += genRandom();    
+								
+	}
+	
+	cout << "RandomZahl: "<< Str << endl;
+	
+	int sec = 31;
+	do {
+		Sleep(1000);
+		sec--;
+		cout << "Verbleibende Zeit: " << sec << endl;
+		
+
+		if (sec == 0) {
+			Str += genRandom();
+			cout << "Neuer Key: " << Str << endl;
+			sec = 31;
+		}
+
+	
+	} while (sec <= 31 && sec > 0);
+	
+	
+	
+	cin.sync();
+	cin.get();
+	return 0;
+}
+
+
