@@ -15,12 +15,11 @@
 @end
 
 @implementation AppDelegate
-NosNotify *closer;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         
-
+        printf(@"Diese App ist im Rahmen von Jugend hackt Süd entstanden.");
     
     return YES;
 }
