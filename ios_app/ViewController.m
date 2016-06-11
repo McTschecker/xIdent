@@ -22,9 +22,9 @@ int timed;
 
 @implementation ViewController
 
--(void)viewDidLoad
+-(void)viewDidLoad //Das hier wird aufgerufen sobald die App gestartet ist.
 {
-    timed = 20;
+    timed = 20; // Zeit auf 20 setzen
     
     [super viewDidLoad];
     NSTimer *counter;
@@ -32,17 +32,17 @@ int timed;
     
     UINavigationBar *bar;
     bar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/10)];
-    [self.view addSubview:bar];
+    [self.view addSubview:bar]; //Unnötige Bar hinzufügen
     indicator = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(self.view.center.x, self.view.center.y, 10, 10)];
     [self.view addSubview:indicator];
-    [indicator startAnimating];
+    [indicator startAnimating]; // ANimation beginnen
     
     
     int factor;
     factor = 200;
     
     _targetd = [[UILabel alloc]initWithFrame:CGRectMake(self.view.center.x-factor/2,self.view.center.y,factor,factor/3)];
-    [self.view addSubview:_targetd];
+    [self.view addSubview:_targetd]; //Als Subview zu self.view adden
     _targetd.backgroundColor = [UIColor whiteColor];
     _targetd.textColor = [UIColor blackColor];
     _targetd.layer.borderWidth = 1.0f;
@@ -55,7 +55,7 @@ int timed;
     
     UIImageView *imageview;
     imageview = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.height/2)-((factor/3)*2), self.view.frame.size.height/6, factor/3, factor/3)];
-    
+    //ImageView eigentlich nicht wichtig, wird aber trotzdem mal geladen.
     
     int ffactor;
     ffactor = self.view.frame.size.width/5;
@@ -71,7 +71,7 @@ int timed;
     [self.view addSubview:update];
     
     timer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(updatekey) userInfo:nil repeats:YES];
-    
+    // Timer starten.
     
     [update addTarget:self action:@selector(updatekey) forControlEvents:UIControlEventPrimaryActionTriggered];
     update.imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -85,13 +85,13 @@ int timed;
     labelcountdown.font = [UIFont boldSystemFontOfSize:self.view.frame.size.width/11];
 
     
-    [self updatekey];
+    [self updatekey]; //Erstes Key_Update starten!
     
     
 }
 -(BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return YES; //Wenn YES ist die Statusbar versteckt.
 }
 -(void)updatekey
 {
@@ -103,7 +103,7 @@ int timed;
     [indicator startAnimating];
     
     NSString *stringfor = [self stringgetKeyfromServer]; //Key abrufen
-    [_targetd setText:stringfor];
+    [_targetd setText:stringfor]; //Text aktualisieren
     
 }
 -(void)getKEY
@@ -118,19 +118,19 @@ int timed;
         [_targetd setText:stringresult];
         
     }];
-    [dataTask resume];
+    [dataTask resume]; // DataTask starten
     
     
 }
--(NSString*)stringgetKeyfromServer
+-(NSString*)stringgetKeyfromServer //Schlechte und lansgame Methode. Achtung. Hier kommt schlechter Code!
 {
     
     NSString *key;
     key = [NSString stringWithContentsOfURL:[NSURL URLWithString:(@"https://gf2.noscio.eu")] encoding:NSUTF8StringEncoding error:nil];
-    return key;
+    return key; //Zurückgeben
     
 }
--(void)updatelabelcountdown
+-(void)updatelabelcountdown //Countdownlabel aktualisieren
 {
     timed--;
     if (timed <= 10)
