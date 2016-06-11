@@ -1,0 +1,10 @@
+Was brauchen wir für den Server?
+
+- Debian Linux
+  - Apache
+  - PHP
+  - FTP
+  - (sql)
+
+Auth server
+  - sql
