@@ -17,7 +17,7 @@ UIButton *update;
 UIActivityIndicatorView *indicator;
 UILabel *labelcountdown;
 int timed;
-
+UIActivityIndicator *activitymain;
 
 
 @implementation ViewController
@@ -88,6 +88,10 @@ int timed;
     [self updatekey]; //Erstes Key_Update starten!
     
     
+
+activitymain = [UIActivityIndicator alloc]initwithFrame:CGRectMake:(0,0,self.view.frame.size.width,self.view.frame.size.height)];
+[self.view addsubView:activitymain];
+
 }
 -(BOOL)prefersStatusBarHidden
 {
@@ -111,11 +115,14 @@ int timed;
     NSString *url_bu;
     
     url_bu = @"";
+    [self startActivity];
+    
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://gf2.noscio.eu"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { // Bitte die gf2.noscio.eu Domain mit dem richtigen Pfad zum Keygenerator ersetzen.
         NSString *stringresult;
         stringresult = [stringresult initWithData:data encoding:NSUTF8StringEncoding];
         [_targetd setText:stringresult];
+        [self stopActivity];
         
     }];
     [dataTask resume]; // DataTask starten
@@ -148,5 +155,19 @@ int timed;
         timed = 20;
         labelcountdown.textColor = [UIColor blackColor];
     }
+}
+-(void)startActivity
+{
+activitymain.hidden = NO;
+
+[activitymain startAnimating];
+
+}
+-(void)stepActivity
+{
+activitymain.hidden = YES;
+[activitymain stopAnimating];
+
+
 }
 @end
