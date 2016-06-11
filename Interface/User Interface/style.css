@@ -1,5 +1,6 @@
 body{
     font-family: 'Open Sans', sans-serif;
+    background-image: url(images/background.jpg)
 }
 #wrapper{
     top: 5%;
@@ -8,7 +9,8 @@ body{
 	width: 90%;  
 	margin: auto;
 	min-height: 100%;
-	box-shadow: 0px 0px 5px 1px grey;
+	border-radius: 15px;
+	
 }
 .clear{
     clear: both;
@@ -23,6 +25,14 @@ body{
 	position: absolute;
 
 }
+#head img{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 #bar{  
     padding-top: 10%;
 }  
@@ -35,7 +45,7 @@ body{
 	font-weight: 100;
 }
 #text2{
-    padding-top: 2%;
+    padding-top: 1%;
     font-size: 30px;
     text-align: center;
 }
@@ -46,6 +56,8 @@ body{
     margin-left: 10%;
     margin-bottom: 10%;     
 }
+  
+
 
 #site1 a{
     border-radius: 20px;
@@ -53,7 +65,8 @@ body{
     width: 100px;
     margin-left: 20%;
     float: left;
-    background-image: url(images/twitter.png);
+    background-image: url(images/logo3.png);
+
 }
 
 #site2 a{
@@ -62,7 +75,8 @@ body{
     width: 100px;
     float: right;   
     margin-right: 20%; 
-    background-image: url(images/twitter.png);
+    background-image: url(images/logo3.png);
+
 }
 
 .hover a:hover{
@@ -70,8 +84,10 @@ body{
 }
 
 #footer{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     height: 10%;
     width: 100%;
     background-color: #808080;
-
+    margin-bottom: 5%;
 }
