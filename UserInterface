@@ -1,0 +1,46 @@
+<html>
+<head><title>xIdent</title>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<meta charset="ISO-8859-1"/>
+</head>
+<body>
+	<div id="wrapper">
+		      <div class="mid">
+		      <img src="images/logo2.png"/>
+		      </div>
+		          <div id="bar">
+		          <hr/>
+                  </div>
+		              <div id="text1">
+                        Auf welche Webseite m&ouml;chten Sie sich sicher einloggen?
+                      </div>
+
+        <div id="sites">
+            <div id="site1" class="hover">
+                <a href="index.html">  </a>
+            </div>
+
+            <div id="site2" class="hover">
+                <a href="index.html">  </a>
+            </div>
+
+            <div class="clear">
+            </div>
+        </div>
+
+            <div id="footer">
+                <div id="text2">
+                xIdent &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy;2016
+                </div>
+            </div>
+
+	</div>
+
+
+
+</body>
+</html>
+
+
+</body>
+</html>
