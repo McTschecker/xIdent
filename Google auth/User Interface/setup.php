@@ -64,11 +64,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <?php
 function savecode ()
 {
-   
+   $pdo = new PDO('mysql:host=127.0.1;dbname=gauth', 'setup1', 'P4Tra8S34ZH9pmdb');
+ 
+$statement = $pdo->prepare("INSERT INTO gauth (gauth) VALUES (gauth)");
+$statement->execute($secret);    
 
-$code = fopen("skey.txt","w");
-echo ($code,$secret ,20);
-fclose($code);
 
 }
 ?>
