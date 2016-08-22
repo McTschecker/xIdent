@@ -8,4 +8,4 @@ php:
   - 7
   - hhvm
 
-script: phpunit --coverage-text tests
+script:cd GoogleAuthenticator &&  phpunit --coverage-text tests 
