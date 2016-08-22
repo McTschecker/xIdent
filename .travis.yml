@@ -8,4 +8,4 @@ php:
   - 7
   - hhvm
 
-script: cd "Google Auth"
+script: cd "Google Auth
